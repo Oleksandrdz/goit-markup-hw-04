@@ -211,24 +211,18 @@ body {
 }
 
 .designation {
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
-  letter-spacing: 0.02em;
-  background-color: var(--dark-bgr);
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding: 188px 0;
+  max-width: 1440px;
+  height: 600px;
+  margin: 0 auto;
   background-image: linear-gradient(
-      to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office.jpg);
-  color: var(--backgr-color);
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: 1440px 600px;
+  background-position: center;
+  background-size: cover;
 }
 
 .designation-title {
@@ -304,7 +298,8 @@ body {
 }
 .team-social-link:hover,
 .team-social-link:focus {
-  background-color: var(--successColor);
+  background-color: var(--backgr-btn);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .title-adv {
   font-weight: 500;
@@ -394,7 +389,7 @@ body {
   width: calc((100% - 48px) / 3);
 }
 .empl-card {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 .empl {
   font-weight: 500;
@@ -429,13 +424,14 @@ body {
   padding: 120px 0;
 }
 .customers-title {
-  font-size: var(--logo-font);
+  font-size: var(--dark-bgr);
   text-align: center;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: 0.72px;
   margin-bottom: 72px;
+  text-transform: capitalize;
 }
 .customers-list {
   display: flex;
@@ -458,9 +454,8 @@ body {
 }
 .customers-link:hover,
 .customers-link:focus {
-  border-color: var(-backgr-btn);
-  fill: var(-backgr-btn);
-  color: var(-backgr-btn);
+  border-color: var(--backgr-btn);
+  color: var(--backgr-btn);
 }
 .customers-list-item {
   width: calc((100% - 120px) / 6);
@@ -515,6 +510,10 @@ body {
   letter-spacing: 0.04em;
   border: 1px solid var(--btn-clr);
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .guide-btn:hover,
@@ -522,6 +521,8 @@ body {
   border: 1px solid transparent;
   color: var(--backgr-color);
   background-color: var(--backgr-btn);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .specification {
@@ -612,7 +613,7 @@ body {
 
 .m-close-btn:hover,
 .m-close-btn:focus {
-  background-color: var(--backgr-btn);
+  fill: var(--backgr-btn);
   border: none;
 }
 
@@ -629,10 +630,16 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-img {
+  position: relative;
   width: 360px;
   height: 300px;
-  position: relative;
+  margin: 0 auto;
+  background-color: var(--primaryBrand);
   overflow: hidden;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.14);
 }
 .portfolio-img-overlay {
   position: absolute;
