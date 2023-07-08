@@ -433,6 +433,7 @@ body {
   letter-spacing: 0.72px;
   margin-bottom: 72px;
   text-transform: capitalize;
+  color: var(--ancillary-color);
 }
 .customers-list {
   display: flex;
